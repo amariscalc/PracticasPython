@@ -1,1 +1,1 @@
-print ("Hola mundo, un saludo a todos y todas.");
+print("Hola mundo, un saludo a todos y todas.")
