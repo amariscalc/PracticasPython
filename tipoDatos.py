@@ -20,8 +20,8 @@ mayorEdad = True
 altura = 1.81 
 
 #Como consultar el tipo de dato. Se utiliza la función "type()"
-print(type(nombre))
-print(type(edad))
-print(type(lugarNacimiento))
-print(type(mayorEdad))
-print(type(altura))
+print(type(nombre))  # Tipo string (cadena caracteres)
+print(type(edad))  # Tipo int (entero)
+print(type(lugarNacimiento)) # Tipo string (cadena caracteres)
+print(type(mayorEdad)) # Tipo Booleano (Verdadero/False)
+print(type(altura)) # Tipo float (numeros reales/numeros con decimales)
