@@ -13,6 +13,7 @@ nombre = "Alberto"
 print (type(nombre_ciudad))
 print (type(edad))
 print (type(nombre))
+print (type(1+1j))
 
 #Imprimir por pantalla usando las variables anteriores, de forma concatenada
 print ("Me llamo",nombre,"soy de",nombre_ciudad,"y tengo",edad,"años")
