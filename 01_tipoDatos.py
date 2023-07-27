@@ -15,13 +15,13 @@ En Python para declarar variables solo debes darles nombre y asignales un valor,
 """
 nombre = "Alberto"
 edad = 35
-lugarNacimiento = "Sevilla"
-mayorEdad = True
+lugar_nacimiento = "Sevilla"
+mayor_edad = True
 altura = 1.81 
 
 #Como consultar el tipo de dato. Se utiliza la función "type()"
 print(type(nombre))  # Tipo string (cadena caracteres)
 print(type(edad))  # Tipo int (entero)
-print(type(lugarNacimiento)) # Tipo string (cadena caracteres)
-print(type(mayorEdad)) # Tipo Booleano (Verdadero/False)
+print(type(lugar_nacimiento)) # Tipo string (cadena caracteres)
+print(type(mayor_edad)) # Tipo Booleano (Verdadero/False)
 print(type(altura)) # Tipo float (numeros reales/numeros con decimales)
