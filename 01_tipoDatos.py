@@ -10,7 +10,8 @@ de comentarios en varias lineas
 con comillas dobles y comillas simples
 '''
 
-"""Declaración de variables
+"""
+Declaración de variables
 En Python para declarar variables solo debes darles nombre y asignales un valor, o un valor vacío none
 """
 nombre = "Alberto"
