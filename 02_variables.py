@@ -29,7 +29,8 @@ print(len(edad), len(nombre))
 
 pi = 3.14219
 
-'''Los tipo float no son compatibles con la función len()
+'''
+Los tipo float no son compatibles con la función len()
 print(len(pi))
 '''
 
