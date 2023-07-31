@@ -36,5 +36,3 @@ print(len(pi))
 #Inicialización variables en una sola línea. No es muy buena práctica.
 name, alias, age, city = "Jose Luis", "Joselu", 35, "Utrera" 
 print("Me llamo",name,"tengo",age,"años y soy de",city,". Más conocido como",alias)
-
-#
