@@ -20,3 +20,24 @@ Las tuplas son inmutables.
 Ejemplo:
 my_tuple [1] = "Pepe" # TypeError: 'tuple' object does not support item assignment
 '''
+
+my_other_tuple = (0,1,45,67,32,90)
+
+# Sumar tuplas
+print (my_tuple + my_other_tuple)
+
+my_third_tuple = my_tuple + my_other_tuple
+print (my_third_tuple[3:6])
+
+'''
+Si lo que queremos es una """tupla""" mutable, realmente queremos una lista, podemos reasignarla a lista
+y hacer las operaciones necesarias, posteriormente reasignar a tupla por seguridad. 
+ '''
+my_third_tuple = list (my_third_tuple)
+print (type (my_third_tuple)) # <class 'list'>
+
+my_third_tuple.insert(0,"Bético")
+my_third_tuple = tuple (my_third_tuple)
+
+print (my_third_tuple)
+print (type(my_third_tuple)) # <class 'tuple'>
