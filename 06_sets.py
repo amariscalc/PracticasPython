@@ -50,3 +50,39 @@ print (my_difference_set) # {'Jerez', 3, 6}
 my_difference_update_set = {1,2,3,4,"Sevilla",1.81,25,"Betis","Alberto"}
 my_difference_update_set.difference_update(my_other_set) # {3, 1.81, 'Alberto', 'Betis', 25}
 print(my_difference_update_set)
+
+# Intersection. Devuelve un nuevo set con los objetos que se encuentran en todos los sets.
+a = {1,"Sevilla",3,5,2,"Jacinto",7,5,True, False}
+b = {1,2,3,4,5,"Oviedo",6}
+c = {"Chocolate",5,2,"Betis",3,"Jaen",4,3.77,6}
+d = a.intersection(b,c)
+print(type(d)) # <class 'set'>
+print(d) # {2, 3, 5}
+
+# Intersection_update. Elimina los objetos que no están presentes en todos los sets.
+print (a) # {False, 1, 2, 3, 5, 7, 'Jacinto', 'Sevilla'}
+print (type(a)) # <class 'set'>
+a.intersection_update(b,c)
+print (a) # {2, 3, 5}
+
+# Isdisjoint. Devuelve true si ningun objeto está presente en todos los sets, de lo contrario
+# devuelve False.
+a = {1,2,3}
+b = {2,4,5,6}
+print(a.isdisjoint(b)) # False
+c = a.isdisjoint(b)
+print (c) # False
+
+# Issubset. Devuelve True si todos los objetos del set estan presentes en el otro set.
+a = {1,2,3,4}
+b = {2,3}
+print(a.issubset(b)) # False
+
+# Issuperset. Devuelve True si todos los objetos de un set están presentes en el otro set
+print(a.issuperset(b)) #True
+
+# Pop. Elimina un elemento aleatorio del set
+print (a)
+x = a.pop()
+print (x)
+print (a)
