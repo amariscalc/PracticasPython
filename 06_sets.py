@@ -82,7 +82,7 @@ print(a.issubset(b)) # False
 print(a.issuperset(b)) #True
 
 # Pop. Elimina un elemento aleatorio del set
-print (a)
+print (a) # {1, 2, 3, 4}
 x = a.pop()
-print (x)
-print (a)
+print (x) # 1
+print (a) # {2, 3, 4}
