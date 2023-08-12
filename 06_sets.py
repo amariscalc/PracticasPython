@@ -86,3 +86,39 @@ print (a) # {1, 2, 3, 4}
 x = a.pop()
 print (x) # 1
 print (a) # {2, 3, 4}
+
+# symmetric_difference. 
+# Devuelve un set que contiene todos los objetos salvo los que están presentes en ambos sets
+a = {15,";Betis!",3,5,2,True, False,"sevilla", 5,99,0}
+b = {2,4,5,7,9,"Sevilla",2.88,4,True}
+z = a.symmetric_difference(b)
+print(type(z)) # <class 'set'>
+print(z) # {False, 2.88, 4, 3, 7, 99, 9, ';Betis!', 15, 'sevilla', 'Sevilla'}
+
+# symmetric_difference_update.
+# Elimina los objetos que no están presentes en ambos sets y los inserta en el set que invoca el método
+a = {15,";Betis!",3,5,2,True, False,"sevilla", 5,99,0}
+b = {2,4,5,7,9,"Sevilla",2.88,4,True}
+a.symmetric_difference_update(b)
+print (type(a)) # <class 'set'>
+print (a) # {';Betis!', 'Sevilla', 3, False, 2.88, 99, 4, 7, 9, 15, 'sevilla'}
+
+# Union. Devuelve un set que contiene los objetos de ambos sets,exceptuando duplicados, por definición
+# propia de los sets.
+a = {1,2,3,4,5}
+b = {6,7,8,9,10}
+c = {11,12,13,14,15}
+
+d = a.union(b,c)
+print (type(d)) # <class 'set'>
+print (d) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15}
+
+# Update. Actualiza un set añadiendo objetos desde otro set o coleccion de objetos (iterables)
+# Si se introduce una única cadena de texto la dividirá en carácteres individuales, tratandolos como
+# objetos individuales
+y = {"a","b",333, "pepe"}
+d.update(y)
+print (d) # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 333, 'b', 'a'}
+
+d.update ("Vacaciones")
+print (d) #{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 333, 'a', 'c', 'i', 'V', 'pepe', 'o', 'n', 'e', 'b', 's'}
