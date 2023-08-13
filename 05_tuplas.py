@@ -2,6 +2,7 @@
 Tuplas
 Es una secuencia de valores agrupados. Sirve para agrupar, como si fueran un único valor, varios valores que, 
 por su naturaleza, deben ir juntos. El tipo de datos que representa a las tuplas se llama tuple.
+Por definicion, las tuplas son inmutables.
 '''
 
 my_tuple = tuple ()
