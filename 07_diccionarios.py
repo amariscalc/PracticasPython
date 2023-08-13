@@ -119,10 +119,11 @@ provincias = {
         "Habitantes":1245960,
     }
 }
-# Recorremos el diccionario y guardamos las key y valor en dos variables
+# Recorremos el diccionario y las provincias en una variable
 x = ""
 y = "" 
 for x in provincias.items():
         print ("Provincia ",x[0])
+        # Recorremos los values del diccionario y los guardamos en y que será una tupla
         for y in x[1].items():
             print ("\t %s %s. "%(y[0], y[1]))
