@@ -127,3 +127,43 @@ for x in provincias.items():
         # Recorremos los values del diccionario y los guardamos en y que será una tupla
         for y in x[1].items():
             print ("\t %s %s. "%(y[0], y[1]))
+
+# fromkeys. Crear diccionario solo con keys y sin valores
+datos_personales = dict.fromkeys (("Nombre","Apellido","Edad","Nacionalidad"))
+print (datos_personales) # {'Nombre': None, 'Apellido': None, 'Edad': None, 'Nacionalidad': None}
+
+### Crear un diccionario a partir de una lista.
+# Creamos una lista vacia
+frutas = []
+# Aquí podemos ver que efectivamente es de clase list
+print (type(frutas)) # <class 'list'>
+# Introducimos algunos datos en la lista
+frutas = ["Manzana","Platano","Nazanja","Fresa","Melón","Sandía"]
+print (frutas) # ['Manzana', 'Platano', 'Nazanja', 'Fresa', 'Melón', 'Sandía']
+# Creamos un diccionario
+dict_from_list = {}
+# Vemos que se se ha creado correctamente
+print (type(dict_from_list)) # <class 'dict'>
+# Alimentamos el diccionario con los datos de la lista anterior
+dict_from_list = dict.fromkeys(frutas)
+# Podemos comprobar que aún sigue siendo de clase dict
+print (type(dict_from_list)) # <class 'dict'>
+print (dict_from_list) # {'Manzana': None, 'Platano': None, 'Nazanja': None, 'Fresa': None, 'Melón': None, 'Sandía': None}
+
+# Crear un diccionario con keys sin valores a partir de otro diccionario
+# Primero vamos a poblar un diccionario que usaremos despues de base para crear el nuevo diccionario sin valores, solo keys.
+dict_from_list = {
+     "Manzana":3,
+     "Plátano":4,
+     "Naranja":9,
+     "Fresa":6,
+     "Melón":3,
+     "Sandía": 20
+}
+print (dict_from_list) # {'Manzana': 3, 'Plátano': 4, 'Naranja': 9, 'Fresa': 6, 'Melón': 3, 'Sandía': 20}
+new_dict = dict.fromkeys(dict_from_list)
+print (new_dict) # {'Manzana': None, 'Plátano': None, 'Naranja': None, 'Fresa': None, 'Melón': None, 'Sandía': None}
+
+# Misma operación el mismo valor para todas las keys
+new_dict = dict.fromkeys(dict_from_list,0)
+print (new_dict) # {'Manzana': 0, 'Plátano': 0, 'Naranja': 0, 'Fresa': 0, 'Melón': 0, 'Sandía': 0}
