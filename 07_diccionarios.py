@@ -38,7 +38,7 @@ print (my_other_dict.keys()) # dict_keys(['Nombre', 'Apellido', 'Edad'])
 # Obtener los valores de un diccionario
 print (my_other_dict.values()) # dict_values(['Alberto', 'Mariscal', 35])
 
-# Objeter los objetos. Devuelve algo parecido a un set que contiene una tupla por cada objeto "key,valor".
+# Obtener los objetos. Devuelve algo parecido a un set que contiene una tupla por cada objeto "key,valor".
 my_set_item = list ()
 my_set_item = my_other_dict.items()
 print (type(my_set_item))
