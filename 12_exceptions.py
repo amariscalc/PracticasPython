@@ -6,8 +6,8 @@ flow of the program's instructions
 
 try:
     print (4 + "2")
-except TypeError:
-    print ("it´s a exception.")
+except TypeError as error_type_error:
+    print ("it´s a exception. {}".format(error_type_error)) # it´s a exception. unsupported operand type(s) for +: 'int' and 'str'
 else:
     print ("Not exception here")
 finally:
@@ -16,9 +16,10 @@ finally:
 #
 try:
     print (4 + "2")
-except TypeError as error:
-    print ("it´s a exception.")
-    print (error) # unsupported operand type(s) for +: 'int' and 'str'
+except ValueError as error_value:
+    print ("it´s a exception ValueError %s"%(error_value))
+except Exception as error_exception:
+    print ("it´s a exception. %s" %(error_exception)) # it´s a exception. unsupported operand type(s) for +: 'int' and 'str'
 else:
     print ("Not exception here")
 finally:
