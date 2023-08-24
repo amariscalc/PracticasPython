@@ -36,4 +36,4 @@ print (math.pow(3,3)) # 27.0
 
 # Import only a funct as alias
 from math import cos as cosine_value
-print (cosine_value(pi)) # -1.0
+print ("El coseno de es %.2f"%(cosine_value(pi))) # -1.0
