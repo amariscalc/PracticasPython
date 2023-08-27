@@ -89,3 +89,19 @@ print (my_time) # 00:00:00
 # New values to "my_time" (or another variable) 
 my_time = my_time.replace(12,00,1)
 print (my_time) # 12:00:01
+
+
+current_time = time()
+
+print (current_time.replace(4,3,2,0)) # 04:03:02
+
+# Diferencias de fechas
+date1 = datetime.now ()
+date2 = date (2023,12,15)
+
+print (date1.date()-date2)
+
+from datetime import timedelta
+
+
+
