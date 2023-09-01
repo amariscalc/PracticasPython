@@ -4,7 +4,7 @@ Write a program that shows by console (with a print) the numbers from 1 to 100.
 Replaces the following:
 · Multiples of 3 changed to "Fizz"
 · Multiples of 5 changed to "Buzz"
-· Multiples of 4 and 5 change to "FizzBuzz"
+· Multiples of 3 and 5 change to "FizzBuzz"
 '''
 # Function to check the number
 def is_fizz_buzz (number):
