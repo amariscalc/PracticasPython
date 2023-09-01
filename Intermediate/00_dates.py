@@ -99,9 +99,13 @@ print (current_time.replace(4,3,2,0)) # 04:03:02
 date1 = datetime.now ()
 date2 = date (2023,12,15)
 
-print (date1.date()-date2)
+#print (date1.date()-date2)
 
 from datetime import timedelta
+# A timedelta object represents a duration, the difference between two dates or times.
 
+init_timedelta = timedelta (days= 90, seconds=30,minutes=30,hours=4,weeks=26)
+ends_timedelta = timedelta (days= 7, seconds=14,minutes=30,hours=19,weeks=150)
 
+print (init_timedelta + ends_timedelta) # 1330 days, 0:00:44
 
