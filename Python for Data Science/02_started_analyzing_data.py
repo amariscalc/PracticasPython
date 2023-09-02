@@ -12,6 +12,9 @@ headers = ["symboling","normalized-losses","make","fuel-type","aspiration","num-
 
 data_frame.columns = headers
 
+path = r"D:\Python\DataScience\automobile_missing_values.csv"
+
+
 # print (data_file)
 
 '''
@@ -125,4 +128,37 @@ Data columns (total 26 columns):
 dtypes: float64(5), int64(5), object(16)
 memory usage: 41.8+ KB
 None
+'''
+
+# Drop Missing values
+data_frame_wmv_tmp = data_frame.replace ("?",numpy.NaN) # Hello NumPy :P How are you ^^ Nice to meet you!
+data_frame_wmv = data_frame_wmv_tmp.dropna  (subset = ["price"], axis=0)
+print (data_frame_wmv)
+data_frame_wmv.to_csv(path)
+
+# Search a columns
+#column_name = input ("Enter de column name to search: ")
+#if column_name in data_frame_wmv.columns:
+#    print ("The column %s exist in the dataframe." %(column_name))
+#else:
+#    print ("The column %s not exist in the dataframe." %(column_name))
+
+# "usecols". Specific columns
+data_frame_wmv = pandas.read_csv (path, usecols=(1,2,3))
+print (data_frame_wmv)
+'''
+     symboling  normalized-losses         make
+0            3                NaN  alfa-romero
+1            3                NaN  alfa-romero
+2            1                NaN  alfa-romero
+3            2              164.0         audi
+4            2              164.0         audi
+..         ...                ...          ...
+196         -1               95.0        volvo
+197         -1               95.0        volvo
+198         -1               95.0        volvo
+199         -1               95.0        volvo
+200         -1               95.0        volvo
+
+[201 rows x 3 columns]
 '''
