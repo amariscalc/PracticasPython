@@ -72,7 +72,10 @@ drive-wheels
 4wd                  NaN           NaN   7603.000000  12647.333333   9095.750000
 fwd              11595.0   8249.000000   8396.387755   9811.800000   9997.333333
 rwd              23949.6  24202.714286  14337.777778  21711.833333  16994.222222
-PS C:\Users\Alberto\Documents\GitHub\PracticasPython> 
 '''
 
-# Anova
+# Correlation
+# df.corr()
+data_frame_wmv[["stroke","price"]].corr()
+
+data_frame_wmv.describe()
