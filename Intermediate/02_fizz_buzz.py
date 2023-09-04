@@ -1,4 +1,4 @@
-# Challenges
+# Challenges - Fizz Buzz
 '''
 Write a program that shows by console (with a print) the numbers from 1 to 100.
 Replaces the following:
@@ -20,7 +20,7 @@ def is_fizz_buzz (number):
         return "Buzz"
     
     else:
-        return str (number) 
+        return number
 
 #main ()
 # Create a list
