@@ -1,5 +1,5 @@
 # Separador de ficheros PDF. Selecciona un fichero y crea un fichero nuevo por página.
-# Especial agradecimiento a "Pildoras de Programación"
+# Especial agradecimiento a "Pildoras de Programación". https://linktr.ee/Pildorasdeprogramacion
 # https://www.facebook.com/reel/964369837988928?fs=e&s=TIeQ9V
 
 from PyPDF2 import PdfReader, PdfWriter
