@@ -27,9 +27,7 @@ while enter_number:
 pdf_original = PdfReader (path_file_orig)
 
 for index,page in enumerate (pdf_original.pages):
-    print ("el valor de index es: %d " %(index))
     for i in pages_separator:
-        print ("valor de i %d" %(i))
         if index + 1 == i:
             pdf_writer = PdfWriter ()
             pdf_writer.add_page (page)
