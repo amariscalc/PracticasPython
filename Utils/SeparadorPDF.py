@@ -16,9 +16,9 @@ while enter_number:
     else:
         pages_separator.append(number)
     finally:
-        more_number = input ("¿Deseas introducir una nueva página a separar?")
-        print (more_number)
-        if more_number.lower() != "si":
+        add_number = input ("¿Deseas introducir una nueva página a separar?")
+        print (add_number)
+        if add_number.lower() != "si":
             enter_number = False
         else:
             enter_number = True
