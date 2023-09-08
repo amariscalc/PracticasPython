@@ -1,5 +1,6 @@
-# Separador de ficheros PDF.
-# Selecciona un fichero y crea un fichero nuevo por página.
+# Separador de ficheros PDF. Selecciona un fichero y crea un fichero nuevo por página.
+# Especial agradecimiento a "Pildoras de Programación"
+# https://www.facebook.com/reel/964369837988928?fs=e&s=TIeQ9V
 
 from PyPDF2 import PdfReader, PdfWriter
 
@@ -17,7 +18,7 @@ while enter_number:
         pages_separator.append(number)
     finally:
         add_number = input ("¿Deseas introducir una nueva página a separar?")
-        
+
         if add_number.lower() != "si":
             enter_number = False
         else:
