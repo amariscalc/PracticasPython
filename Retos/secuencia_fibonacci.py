@@ -61,35 +61,36 @@ def posicion_numero_mas_visto(sec_fibo_inversa):
     fila = 0
     for i in range(len(sec_fibo_inversa)):
         existe = False
-        for j in range(fila):
+
+        for j in range(recuento_numeros_unicos):
             if lista_cont[j][0] == sec_fibo_inversa[i]:
                 existe = True
                 lista_cont[j][1] += 1
-                print (f"dfdsfs   {lista_cont[j][1]}")
                 break
-    if not existe:
-        lista_cont[fila][0] = sec_fibo_inversa[i]
-        lista_cont[fila][1] = 1
-        fila += 1
+                
+        if not existe:
+            lista_cont[fila][0] = sec_fibo_inversa[i]
+            lista_cont[fila][1] = 1
+            fila += 1
 
-    for i in range(len(lista_cont)):
-        print (f"Recuento: {recuento}")
+    for i in range(fila):
         if lista_cont[i][1] > recuento:
-            print (f"{lista_cont[i][1]}")
             posicion = i
             valor = lista_cont[i][0]
             recuento = lista_cont[i][1]
-            print (f"{posicion},{valor},{recuento}")
     
 
     if recuento > 1:
         resultado= "El valor " + str(valor) + " se repite " + str(recuento) + " veces según la posicion " + str(posicion) + " del array bidimensional."
     else:
         resultado= "Todos los valores de la secuencia aparecen por igual."
-    print (resultado)
+    return resultado
+
 # Pedimos el numero de elementos que de los que se debe sacar la secuencia fibonacci
 try:
     fibo_elements = int(input ("Inserta el número elementos de Fibonacci a calcular:"))
+except ValueError as error_value:
+    print ("its a exception. %s" %(error_value))
 except Exception as error_exception:
     print ("its a exception. %s" %(error_exception))
 else:
