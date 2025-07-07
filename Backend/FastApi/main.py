@@ -5,13 +5,12 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+
+### Métodos:
+# GET: Leer datos.
+
 @app.get("/")
 async def root():
-    
-#    return { "Nombre" : "Alberto A.",
-#            "Apellido": "Mariscal",
-#             "Año nacimiento": "1988" }
-
     return {"message": "Hola desde FastAPI"}
 
 @app.get("/contacto")
@@ -23,3 +22,8 @@ async def contacto():
 
 # Con /docs accedemos a la documentación en Swagger.
 # Con /redoc accedemos a la documentacion de Redocly
+
+
+# POST: Crear datos.
+# PUT: Actualizar datos.
+# DELETE: Borrar datos.
