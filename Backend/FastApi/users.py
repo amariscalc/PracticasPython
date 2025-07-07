@@ -27,8 +27,37 @@ async def usersJSON():
 async def users():
     return users_list
 
-
+# Path
 @app.get("/user/{id}")
 async def user(id: int):
+    return search_user(id)
+
+# Al pasar el parámetro por query se especifica en el path por ejemplo /?id=1 asi estámos consultando los datos de un usuario cuya id es 1.
+# Query
+@app.get("/userquery/")
+async def userquery(id: int):
+    return search_user(id)
+
+# Función que se encarga de buscar el usuario. Usado en las funciones asincronas "user" y "userquery"
+def search_user(id: int):
     users = filter (lambda user: user.id == id, users_list)
-    return list(users)[0]
+    try:
+        return list(users)[0]
+    except:
+        return { "Error:":"El usuario no existe."}
+
+### Post
+
+@app.post("/user/")
+async def add_user(new_user: User):
+    #print (search_user(new_user.id))
+    try:
+        # Se comprueba si el tipo de dato que devuelve "search_user" es un Usuario (class User)
+        # Si es un usuario significa que el usuario existe, 
+        # si es distinto a un tipo de dato Usuario significa que el usuario no existe y por lo tanto se puede añadir.
+        if(type(search_user(new_user.id))==User):
+            return "El usuario ya existe"
+        else:
+            users_list.append(new_user)
+    except:
+        return "Error al introducir el usuario"
