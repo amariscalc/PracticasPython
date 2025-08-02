@@ -47,7 +47,7 @@ def search_user(id: int):
         return { "Error:":"El usuario no existe."}
 
 ### Post
-
+#Añadir un usuario nuevo
 @app.post("/user/")
 async def add_user(new_user: User):
     #print (search_user(new_user.id))
@@ -59,5 +59,38 @@ async def add_user(new_user: User):
             return "El usuario ya existe"
         else:
             users_list.append(new_user)
+            return new_user
     except:
         return "Error al introducir el usuario"
+# Para probar la función post creada anteriormente se puede usar postman, seleccionar post, url http://127.0.0.1/user/
+# En el body (como JSON) añadir lo siguiente (con los valores que se quiera probar, estos son de ejemplo):
+#{
+#    "id": 10,
+#    "name": "Manuel",
+#    "surname": "Ruiz de Lopera",
+#    "web": "https://donmanue.com",
+#    "age": 35
+#}
+
+### Put
+# Actualizar un usuario existente
+@app.put("/user/")
+async def add_user(user: User):
+    found = False
+    for index,saved_user in enumerate(users_list):
+        if saved_user.id == user.id:
+            users_list[index] = user
+            found = True
+
+    if not found:
+        return {"Erro":"No se ha podido actualizar el ususario"}
+    else:
+        return user
+    
+
+### Delete
+# Eliminar un usuario existente
+@app.delete("/user/")
+async def del_user(id):
+    return id
+
