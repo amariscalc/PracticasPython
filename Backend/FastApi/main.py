@@ -1,4 +1,5 @@
 ### Main FastApì ###
+#Lanzar el servidor uvicorn: uvicorn main:app --reload
 
 # Importar fastapi
 from fastapi import FastAPI
