@@ -90,7 +90,17 @@ async def add_user(user: User):
 
 ### Delete
 # Eliminar un usuario existente
-@app.delete("/user/")
-async def del_user(id):
-    return id
+@app.delete("/user/{id}")
+async def user(id: int):
+    found = False
+    for index, saved_user in enumerate (users_list):
+        if saved_user.id == id:
+            user_delete=saved_user
+            del users_list[index]
+            found = True
+    
+    if not found:
+        return {"Error":"Usuario no encontrado"}
+    else:
+        return user_delete
 
