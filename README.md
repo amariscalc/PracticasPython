@@ -70,6 +70,7 @@ Este repositorio busca:
 
 📜 Estructura de carpetas
 
+```bash
 📦 Python
  ┣ 📂 Backend
  ┣ 📂 Basic
@@ -82,7 +83,7 @@ Este repositorio busca:
  ┣ 📂 mbot2
  ┣ 📜 README.md
  ┗ 📜 requirements.txt
-
+```
 
 🤝 Contribuciones
 ¡Toda ayuda es bienvenida!
