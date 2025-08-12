@@ -96,10 +96,3 @@ Para contribuir:
 
 
 ✨ "La programación no se aprende leyendo... se aprende escribiendo código."
-
-
----
-
-Si quieres, puedo crearte también **un banner gráfico personalizado** con un estilo más visual y no solo texto, para que se vea profesional en la parte superior de tu GitHub.  
-Ese banner puede tener un fondo oscuro, el logo de Python y el título del repositorio.
-
