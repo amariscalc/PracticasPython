@@ -89,10 +89,10 @@ Este repositorio busca:
 ¡Toda ayuda es bienvenida!
 Para contribuir:
 
-· Haz un fork del repositorio.
-· Crea una rama (git checkout -b mejora-x).
-· Realiza tus cambios y haz un commit.
-· Envía un Pull Request.
+- Haz un fork del repositorio.
+- Crea una rama (git checkout -b mejora-x).
+- Realiza tus cambios y haz un commit.
+- Envía un Pull Request.
 
 
 ✨ "La programación no se aprende leyendo... se aprende escribiendo código."
